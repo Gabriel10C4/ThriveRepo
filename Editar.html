@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Editar Perfil</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+<div class="w-[360px] min-h-[760px] bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- Encabezado -->
+    <div class="bg-cyan-500 h-20 flex items-center px-5 rounded-b-3xl">
+
+        <a href="perfil.html"
+           class="text-white text-3xl font-bold">
+            ←
+        </a>
+
+        <h1 class="text-white text-xl font-bold mx-auto mr-10">
+            Editar Perfil
+        </h1>
+
+    </div>
+
+    <!-- Formulario -->
+    <div class="p-6 space-y-4">
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">
+                Nombre
+            </label>
+
+            <input
+                id="nombre"
+                type="text"
+                class="w-full border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">
+                Correo
+            </label>
+
+            <input
+                id="correo"
+                type="email"
+                class="w-full border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">
+                Foto de perfil
+            </label>
+
+            <input
+                type="file"
+                class="w-full border rounded-xl p-2">
+        </div>
+
+        <button
+            onclick="guardarPerfil()"
+            class="w-full bg-cyan-500 text-white py-3 rounded-full font-semibold hover:bg-cyan-600 transition">
+
+            Guardar cambios
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+    // Cargar datos guardados
+    document.getElementById("nombre").value =
+        localStorage.getItem("nombre") || "Sergio D.";
+
+    document.getElementById("correo").value =
+        localStorage.getItem("correo") || "";
+
+    function guardarPerfil(){
+
+        localStorage.setItem(
+            "nombre",
+            document.getElementById("nombre").value
+        );
+
+        localStorage.setItem(
+            "correo",
+            document.getElementById("correo").value
+        );
+
+        alert("Perfil actualizado correctamente.");
+
+        window.location.href = "perfil.html";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Perfil</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="w-[360px] bg-white rounded-3xl shadow-xl overflow-hidden">
+
+        <!-- Header -->
+        <div class="bg-cyan-500 h-24 rounded-b-3xl"></div>
+
+        <!-- Tarjeta perfil -->
+        <div class="-mt-12 px-6">
+            <div class="bg-white rounded-2xl shadow-lg p-5">
+
+                <div class="flex flex-col items-center">
+
+                    <div class="w-24 h-24 rounded-full border-4 border-cyan-500 bg-gray-200"></div>
+
+                    <h2 class="mt-4 text-xl font-bold text-slate-800">
+                        Sergio D.
+                    </h2>
+
+                    <div class="flex mt-1 text-yellow-400 text-lg">
+                        ★★★★★
+                    </div>
+
+                    <button
+                   <button onclick="window.location.href='editar.html'"
+        class="mt-4 px-6 py-2 rounded-full border border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white transition">
+    Editar perfil
+</button>>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Opciones -->
+        <div class="px-6 mt-6">
+
+            <div class="bg-white rounded-2xl shadow">
+
+                <button
+                    class="w-full py-4 text-red-500 font-semibold border-b hover:bg-red-50 transition">
+                    Cerrar sesión
+                </button>
+
+                <button
+                    class="w-full py-4 text-slate-600 border-b hover:bg-cyan-50 transition">
+                    Contáctanos
+                </button>
+
+                <button
+                    class="w-full py-4 text-slate-600 hover:bg-cyan-50 transition">
+                    ¿Eres una institución?
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div
+            class="fixed bottom-5 left-1/2 -translate-x-1/2 w-[330px] bg-cyan-500 rounded-full shadow-lg">
+
+            <div class="flex justify-around py-3 text-white">
+
+               <div class="flex flex-col items-center text-xs">
+    <img src="img/home.png" alt="Inicio" class="w-6 h-6 mb-1">
+    <span>Inicio</span>
+</div>
+
+<div class="flex flex-col items-center text-xs">
+    <img src="img/trolley.png" alt="Carrito" class="w-6 h-6 mb-1">
+    <span>Carrito</span>
+</div>
+
+<div class="flex flex-col items-center text-xs">
+    <img src="img/bell.png" alt="Bandeja" class="w-6 h-6 mb-1">
+    <span>Bandeja</span>
+</div>
+
+<div class="flex flex-col items-center text-xs font-semibold">
+    <img src="img/user.png" alt="Perfil" class="w-6 h-6 mb-1">
+    <span>Perfil</span>
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
