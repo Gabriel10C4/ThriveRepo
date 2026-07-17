@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Emprendedores</title>
+ 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <style>
+        body{
+            background:#f3f8fc;
+        }
+ 
+        .card:hover{
+            transform: translateY(-6px);
+            transition: .3s;
+            box-shadow:0 15px 30px rgba(0,0,0,.12);
+        }
+    </style>
+</head>
+<body>
+ 
+<div class="max-w-7xl mx-auto">
+ 
+    <!-- Encabezado -->
+    <header class="bg-cyan-500 text-white rounded-b-3xl shadow-lg p-8">
+ 
+        <h1 class="text-4xl font-bold">
+            Noticias
+        </h1>
+ 
+        <p class="mt-2 text-cyan-100">
+            Artículos y contenido para emprendedores
+        </p>
+ 
+    </header>
+ 
+    <!-- Buscador -->
+    <section class="mt-8 px-4">
+ 
+        <div class="flex flex-col md:flex-row gap-4">
+ 
+            <input
+                id="buscar"
+                type="text"
+                placeholder="Buscar artículos..."
+                class="w-full p-3 rounded-full border border-cyan-200 focus:outline-none focus:ring-4 focus:ring-cyan-300">
+ 
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-8 rounded-full font-semibold">
+                Buscar
+            </button>
+ 
+        </div>
+ 
+    </section>
+ 
+    <!-- Categorías -->
+    <section class="mt-8 px-4">
+ 
+        <div class="flex flex-wrap gap-3">
+ 
+            <button class="categoria bg-cyan-500 text-white px-5 py-2 rounded-full">
+                Todos
+            </button>
+ 
+            <button class="categoria bg-white text-cyan-600 border border-cyan-300 px-5 py-2 rounded-full">
+                Marketing
+            </button>
+ 
+            <button class="categoria bg-white text-cyan-600 border border-cyan-300 px-5 py-2 rounded-full">
+                Finanzas
+            </button>
+ 
+            <button class="categoria bg-white text-cyan-600 border border-cyan-300 px-5 py-2 rounded-full">
+                Tecnología
+            </button>
+ 
+            <button class="categoria bg-white text-cyan-600 border border-cyan-300 px-5 py-2 rounded-full">
+                Negocios
+            </button>
+ 
+        </div>
+ 
+    </section>
+ 
+    <!-- Noticias -->
+    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4 pb-10" id="contenedorNoticias">
+ 
+        <!-- Tarjeta -->
+        <div class="card bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800"
+            class="h-52 w-full object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Marketing
+                </span>
+ 
+                <h2 class="mt-4 text-xl font-bold text-gray-800">
+                    5 estrategias para aumentar tus ventas
+                </h2>
+ 
+                <p class="text-gray-600 mt-3">
+                    Aprende cómo atraer nuevos clientes utilizando herramientas digitales y redes sociales.
+                </p>
+ 
+                <button class="mt-5 bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full">
+                    Leer más
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+        <!-- Tarjeta -->
+        <div class="card bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800"
+            class="h-52 w-full object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Finanzas
+                </span>
+ 
+                <h2 class="mt-4 text-xl font-bold text-gray-800">
+                    Cómo administrar el dinero de tu negocio
+                </h2>
+ 
+                <p class="text-gray-600 mt-3">
+                    Consejos para mantener una buena salud financiera y evitar pérdidas.
+                </p>
+ 
+                <button class="mt-5 bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full">
+                    Leer más
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+        <!-- Tarjeta -->
+        <div class="card bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+            class="h-52 w-full object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Tecnología
+                </span>
+ 
+                <h2 class="mt-4 text-xl font-bold text-gray-800">
+                    Herramientas gratuitas para emprendedores
+                </h2>
+ 
+                <p class="text-gray-600 mt-3">
+                    Descubre aplicaciones que mejorarán la productividad de tu empresa.
+                </p>
+ 
+                <button class="mt-5 bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full">
+                    Leer más
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+    </section>
+ 
+</div>
+ 
+<script>
+ 
+const buscador = document.getElementById("buscar");
+ 
+buscador.addEventListener("keyup", function(){
+ 
+    let texto = this.value.toLowerCase();
+ 
+    let tarjetas = document.querySelectorAll(".card");
+ 
+    tarjetas.forEach(card=>{
+ 
+        let titulo = card.querySelector("h2").textContent.toLowerCase();
+ 
+        if(titulo.includes(texto)){
+            card.style.display="block";
+        }else{
+            card.style.display="none";
+        }
+ 
+    });
+ 
+});
+ 
+const categorias=document.querySelectorAll(".categoria");
+ 
+categorias.forEach(btn=>{
+ 
+    btn.addEventListener("click",()=>{
+ 
+        categorias.forEach(b=>{
+            b.classList.remove("bg-cyan-500","text-white");
+            b.classList.add("bg-white","text-cyan-600");
+        });
+ 
+        btn.classList.remove("bg-white","text-cyan-600");
+        btn.classList.add("bg-cyan-500","text-white");
+ 
+    });
+ 
+});
+ 
+</script>
+ 
+</body>
+</html>
+ 

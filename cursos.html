@@ -1,0 +1,255 @@
+
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos para Emprendedores</title>
+ 
+<script src="https://cdn.tailwindcss.com"></script>
+ 
+<style>
+body{
+    background:#f3f8fc;
+}
+ 
+.curso{
+    transition:.3s;
+}
+ 
+.curso:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+</style>
+ 
+</head>
+<body>
+ 
+<div class="max-w-7xl mx-auto">
+ 
+    <!-- Encabezado -->
+    <header class="bg-cyan-500 rounded-b-3xl shadow-lg text-white p-8">
+ 
+        <h1 class="text-4xl font-bold">
+            Cursos
+        </h1>
+ 
+        <p class="mt-2 text-cyan-100">
+            Cursos disponibles para emprendedores.
+        </p>
+ 
+    </header>
+ 
+    <!-- Buscador -->
+ 
+    <section class="mt-8 px-4">
+ 
+        <div class="flex flex-col md:flex-row gap-4">
+ 
+            <input
+            id="buscarCurso"
+            type="text"
+            placeholder="Buscar un curso..."
+            class="w-full p-3 rounded-full border border-cyan-200 focus:outline-none focus:ring-4 focus:ring-cyan-300">
+ 
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-8 rounded-full">
+                Buscar
+            </button>
+ 
+        </div>
+ 
+    </section>
+ 
+    <!-- Curso destacado -->
+ 
+    <section class="px-4 mt-10">
+ 
+        <div class="bg-cyan-500 rounded-3xl p-8 text-white shadow-lg">
+ 
+            <span class="bg-white text-cyan-600 px-4 py-1 rounded-full text-sm font-semibold">
+                Curso recomendado
+            </span>
+ 
+            <h2 class="text-3xl font-bold mt-4">
+                Emprendimiento desde Cero
+            </h2>
+ 
+            <p class="mt-3 text-cyan-100">
+                Aprende a crear, administrar y hacer crecer tu negocio con herramientas
+                modernas de gestión, marketing y finanzas.
+            </p>
+ 
+            <div class="grid md:grid-cols-3 gap-6 mt-6">
+ 
+                <div>
+                     <strong>Duración</strong><br>
+                    8 semanas
+                </div>
+ 
+                <div>
+                     <strong>Nivel</strong><br>
+                    Principiante
+                </div>
+ 
+                <div>
+                     <strong>Modalidad</strong><br>
+                    Virtual
+                </div>
+ 
+            </div>
+ 
+        </div>
+ 
+    </section>
+ 
+    <!-- Lista de cursos -->
+ 
+    <section id="listaCursos"
+    class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4 pb-10">
+ 
+        <!-- Curso -->
+ 
+        <div class="curso bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+            class="w-full h-52 object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Marketing
+                </span>
+ 
+                <h3 class="titulo text-xl font-bold mt-4">
+                    Marketing Digital
+                </h3>
+ 
+                <p class="text-gray-600 mt-3">
+                    Aprende publicidad en redes sociales, SEO y estrategias de venta.
+                </p>
+ 
+                <div class="mt-4 text-gray-500 text-sm">
+ 
+                     20 horas
+ 
+                    <br>
+ 
+                     Nivel Básico
+ 
+                </div>
+ 
+                <button class="mt-6 w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full">
+                    Inscribirme
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+        <!-- Curso -->
+ 
+        <div class="curso bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800"
+            class="w-full h-52 object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Finanzas
+                </span>
+ 
+                <h3 class="titulo text-xl font-bold mt-4">
+                    Finanzas para Emprendedores
+                </h3>
+ 
+                <p class="text-gray-600 mt-3">
+                    Aprende a administrar ingresos, gastos y flujo de caja.
+                </p>
+ 
+                <div class="mt-4 text-gray-500 text-sm">
+ 
+                     15 horas
+ 
+                    <br>
+ 
+                     Intermedio
+ 
+                </div>
+ 
+                <button class="mt-6 w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full">
+                    Inscribirme
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+        <!-- Curso -->
+ 
+        <div class="curso bg-white rounded-3xl overflow-hidden shadow-md">
+ 
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+            class="w-full h-52 object-cover">
+ 
+            <div class="p-6">
+ 
+                <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm">
+                    Tecnología
+                </span>
+ 
+                <h3 class="titulo text-xl font-bold mt-4">
+                    Comercio Electrónico
+                </h3>
+ 
+                <p class="text-gray-600 mt-3">
+                    Aprende a vender productos y servicios por Internet.
+                </p>
+ 
+                <div class="mt-4 text-gray-500 text-sm">
+ 
+                     18 horas
+ 
+                    <br>
+ 
+                     Intermedio
+ 
+                </div>
+ 
+                <button class="mt-6 w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full">
+                    Inscribirme
+                </button>
+ 
+            </div>
+ 
+        </div>
+ 
+    </section>
+ 
+</div>
+ 
+<script>
+ 
+const buscador=document.getElementById("buscarCurso");
+ 
+buscador.addEventListener("keyup",()=>{
+ 
+    const texto=buscador.value.toLowerCase();
+ 
+    document.querySelectorAll(".curso").forEach(curso=>{
+ 
+        const titulo=curso.querySelector(".titulo").textContent.toLowerCase();
+ 
+        curso.style.display=titulo.includes(texto) ? "block" : "none";
+ 
+    });
+ 
+});
+ 
+</script>
+ 
+</body>
+</html>
+ 
