@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const btnC = document.getElementById("btnC");
     if(btnC){
         btnC.onclick = function(){
-            window.location.href = "auth.html";
+            window.location.href = "views/auth.html";
         };
     }
 
