@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso - Thrive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-[url('../assets/images/firstp.png')] bg-repeat font-sans">
+
+  <!-- Capa oscura encima del fondo -->
+  <div class="min-h-screen bg-black/20 flex items-center justify-center px-4 py-10">
+
+    <!-- Card principal -->
+    <div class="w-full max-w-[460px] rounded-2xl bg-white p-8 shadow-[0px_10px_25px_gray]">
+
+      <!-- Botón volver -->
+      <a href="../index.html" class="inline-block mb-4">
+        <img src="../assets/images/back.png" alt="Volver" class="h-8 w-8 cursor-pointer">
+      </a>
+
+      <!-- Tabs principales -->
+      <div class="mb-6 flex rounded-xl bg-gray-200 p-1">
+        <button id="tabLogin" class="w-1/2 rounded-lg bg-[#0077B6] py-3 font-bold text-white transition">
+          Iniciar sesión
+        </button>
+        <button id="tabRegister" class="w-1/2 rounded-lg py-3 font-bold text-gray-700 transition">
+          Registrarse
+        </button>
+      </div>
+
+      <!-- ================= LOGIN ================= -->
+      <section id="loginSection">
+        <h2 class="text-3xl font-bold text-[#00B4D8] text-center">Inicio de sesión</h2>
+        <p class="mt-2 text-center text-gray-500">Bienvenido de nuevo a Thrive</p>
+
+        <form id="loginForm" class="mt-6 flex flex-col gap-4">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Correo: ejemplo@gmail.com"
+            class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+          />
+
+          <input
+            type="password"
+            placeholder="Ingrese su contraseña"
+            class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+          />
+
+          <a href="#" class="text-center text-sm text-gray-500 hover:text-[#0077B6]">
+            ¿Olvidaste tu contraseña?
+          </a>
+
+          <button
+            id="EnterB"
+            type="submit"
+            class="w-full rounded-xl bg-[#0077B6] py-3 text-lg font-bold text-white shadow-md"
+          >
+            Iniciar sesión
+          </button>
+
+          <p class="text-center text-gray-500">o continúa con</p>
+
+          <div class="flex gap-2">
+            <button type="button" class="w-1/2 rounded-xl bg-[#00B4D8] py-3 font-bold text-white">
+              Google
+            </button>
+            <button type="button" class="w-1/2 rounded-xl bg-[#03045E] py-3 font-bold text-white">
+              Microsoft
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ================= REGISTER ================= -->
+      <section id="registerSection" class="hidden">
+
+        <h2 class="text-3xl font-bold text-[#00B4D8] text-center">Regístrate</h2>
+        <p class="mt-2 text-center text-gray-500">Crea tu cuenta en Thrive</p>
+
+        <!-- Tabs tipo de cuenta -->
+        <div class="mt-6 flex rounded-xl bg-gray-200 p-1">
+          <button id="clientTab" class="w-1/2 rounded-lg bg-[#00B4D8] py-3 font-bold text-white transition">
+            Cliente
+          </button>
+          <button id="entrepreneurTab" class="w-1/2 rounded-lg py-3 font-bold text-gray-700 transition">
+            Emprendedor
+          </button>
+        </div>
+
+        <!-- ===== Registro Cliente ===== -->
+        <div id="clientRegister" class="mt-6">
+          <form class="flex flex-col gap-4">
+
+            <input
+              type="text"
+              placeholder="Nombre completo"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="tel"
+              placeholder="Tel: 1234 5678"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="email"
+              placeholder="Correo: ejemplo@gmail.com"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="password"
+              placeholder="Contraseña: mínimo 8 caracteres"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="text"
+              placeholder="Método de pago preferido"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="text"
+              placeholder="Departamento"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <input
+              type="text"
+              placeholder="Distrito"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+            />
+
+            <label class="text-sm text-gray-600">Foto de perfil</label>
+            <input
+              type="file"
+              class="w-full rounded-xl bg-gray-200 px-4 py-3 text-sm outline-none"
+            />
+
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-[#0077B6] py-3 text-lg font-bold text-white shadow-md"
+            >
+              Crear cuenta
+            </button>
+
+            <p class="text-center text-gray-500">o continúa con</p>
+
+            <div class="flex gap-2">
+              <button type="button" class="w-1/2 rounded-xl bg-[#00B4D8] py-3 font-bold text-white">
+                Google
+              </button>
+              <button type="button" class="w-1/2 rounded-xl bg-[#03045E] py-3 font-bold text-white">
+                Microsoft
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ===== Registro Emprendedor ===== -->
+        <div id="entrepreneurRegister" class="mt-6 hidden">
+
+          <!-- Indicador de pasos -->
+          <div class="mb-4 flex items-center justify-center gap-2 text-sm font-semibold">
+            <span id="step1Indicator" class="rounded-full bg-[#0077B6] px-3 py-1 text-white">Paso 1</span>
+            <span id="step2Indicator" class="rounded-full bg-gray-200 px-3 py-1 text-gray-600">Paso 2</span>
+          </div>
+
+          <!-- Paso 1 -->
+          <div id="entrepreneurStep1">
+            <form id="entrepreneurFormStep1" class="flex flex-col gap-4">
+
+              <input
+                type="text"
+                id="entrepreneurBusinessName"
+                placeholder="Nombre del emprendimiento"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <input
+                type="tel"
+                placeholder="Tel: 1234 5678"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <input
+                type="email"
+                placeholder="Correo: ejemplo@gmail.com"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <input
+                type="password"
+                placeholder="Contraseña: mínimo 8 caracteres"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <button
+                type="submit"
+                class="w-full rounded-xl bg-[#0077B6] py-3 text-lg font-bold text-white shadow-md"
+              >
+                Siguiente
+              </button>
+            </form>
+          </div>
+
+          <!-- Paso 2 -->
+          <div id="entrepreneurStep2" class="hidden">
+            <form id="entrepreneurFormStep2" class="flex flex-col gap-4">
+
+              <input
+                type="text"
+                placeholder="Departamento: ejemplo Santa Ana"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <input
+                type="text"
+                placeholder="Distrito: ejemplo Santa Ana"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none"
+              />
+
+              <textarea
+                rows="4"
+                placeholder="Descripción: breve descripción de tu emprendimiento"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-lg outline-none resize-none"
+              ></textarea>
+
+              <label class="text-sm text-gray-600">Foto o logo del emprendimiento</label>
+              <input
+                type="file"
+                class="w-full rounded-xl bg-gray-200 px-4 py-3 text-sm outline-none"
+              />
+
+              <div class="flex gap-2">
+                <button
+                  type="button"
+                  id="backStepBtn"
+                  class="w-1/2 rounded-xl bg-gray-300 py-3 text-lg font-bold text-gray-700"
+                >
+                  Atrás
+                </button>
+
+                <button
+                  type="submit"
+                  class="w-1/2 rounded-xl bg-[#0077B6] py-3 text-lg font-bold text-white shadow-md"
+                >
+                  Crear cuenta
+                </button>
+              </div>
+
+              <p class="text-center text-gray-500">o continúa con</p>
+
+              <div class="flex gap-2">
+                <button type="button" class="w-1/2 rounded-xl bg-[#00B4D8] py-3 font-bold text-white">
+                  Google
+                </button>
+                <button type="button" class="w-1/2 rounded-xl bg-[#03045E] py-3 font-bold text-white">
+                  Microsoft
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- JS separado -->
+  <script src="../js/auth.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
